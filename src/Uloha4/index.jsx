@@ -4,11 +4,21 @@ import React from 'react'
 // Zadání 2: Na klik zobraz bublinu s textem „Ahoj DOPLŇ_JMÉNO_V_PÁTÉM_PÁDĚ“.
 
 const Pozdrav = ({ jmenoVeCtvrtemPade, jmenoVPatemPade }) => {
-	return <button>@TODO</button>
+	const handleClick = () => {
+		alert(`Ahoj ${jmenoVPatemPade}`)
+	}
+	return <button onClick={handleClick}>Pozdrav {jmenoVeCtvrtemPade}</button>
 }
 
 // Zadání 3: Do komponenty `Uloha4` přidej ještě dvě použití komponenty `Pozdrav`. Jednou s tvým jménem a jednou se jménem kouče.
 
 export const Uloha4 = () => {
-	return <Pozdrav jmenoVeCtvrtemPade="Martina" jmenoVPatemPade="Martine" />
+	return (
+		<>
+			<Pozdrav jmenoVeCtvrtemPade="Martina" jmenoVPatemPade="Martine" />
+			<Pozdrav jmenoVeCtvrtemPade="Lenku" jmenoVPatemPade="Lenko" />
+			<Pozdrav jmenoVeCtvrtemPade="Vojtu" jmenoVPatemPade="Vojto" />
+		</>
+	)
+	
 }
